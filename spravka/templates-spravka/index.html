@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <title>Люберецкий Техникум - Заказ Справок</title>
+</head>
+<body>
+
+  <header>
+    <h1>Люберецкий Техникум</h1>
+    <p>Ваш путь к успешной карьере!</p>
+    <img src="{% static 'logog3.png' %}" alt="Логотип" width="500" height="300">
+  </header>
+
+  <nav>
+    <a href="#">Главная</a>
+    <a href="#">О Техникуме</a>
+    <a href="#">Специальности</a>
+    <a href="#">Заказ Справок</a>
+    <a href="#">Контакты</a>
+  </nav>
+
+  <main>
+    <h2>Заказ Справок</h2>
+    <p>Для заказа справки из Люберецкого Техникума, пожалуйста, заполните форму ниже.  Мы обработаем ваш запрос в течение 3 рабочих дней и свяжемся с вами для уточнения деталей получения справки.</p>
+
+    <div class="form-container">
+      <h3>Форма Заказа</h3>
+      <form action="#" method="post">
+        <label for="fio">ФИО (полностью):</label>
+        <input type="text" id="fio" name="fio" required>
+
+        <label for="date_birth">Дата рождения:</label>
+        <input type="text" id="date_birth" name="date_birth" placeholder="ДД.ММ.ГГГГ" required>
+
+        <label for="group">Группа:</label>
+        <input type="text" id="group" name="group" placeholder="Например: ПКС-211" required>
+
+        <label for="type_spravki">Тип справки:</label>
+        <select id="type_spravki" name="type_spravki">
+          <option value="ob_uchenii">Справка об обучении</option>
+          <option value="akademicheskaya">Академическая справка</option>
+          <option value="drugaya">Другая (укажите в комментарии)</option>
+        </select>
+
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Контактный телефон:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="comment">Комментарий (укажите причину запроса и другую информацию):</label>
+        <textarea id="comment" name="comment" rows="4"></textarea>
+
+        <button type="submit">Отправить Запрос</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2023 Люберецкий Техникум. Все права защищены.
+  </footer>
+
+</body>
+</html>
+
